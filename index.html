@@ -1,302 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Roberto Torres – Data and Analytics Leader</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Roberto Torres – Business and Data Analytics leader. Portfolio of analytics, AI and customer insights projects."
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-content">
-        <div class="header-text">
-          <h1>
-            <span>Roberto Torres</span>
-          </h1>
-          <p class="subtitle">Business and Data Analytics Leader</p>
-          <p class="tagline">
-            I help organizations turn data into clear decisions, customer
-            insights and measurable impact.
-          </p>
-        </div>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roberto Torres</title>
+<meta name="description" content="Roberto Torres, Data Architect and BI & Analytics Leader. 15+ years at IBM, Cargill, Pfizer and HP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#F4F6F7; --surface:#FFFFFF; --ink:#13202A; --muted:#55636C; --line:#D9E0E4;
+  --accent:#0F6E73; --accent-soft:#E2F0F0;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1519; --surface:#151F25; --ink:#E3EBEE; --muted:#9AAAB2; --line:#26343B;
+    --accent:#4FC1BE; --accent-soft:#163033; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1519; --surface:#151F25; --ink:#E3EBEE; --muted:#9AAAB2; --line:#26343B;
+  --accent:#4FC1BE; --accent-soft:#163033; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1000px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;text-wrap:balance;margin:0;font-weight:700}
+h2{font-size:1.75rem;margin-bottom:24px}
+h3{font-size:1.1rem}
+p{margin:0}
+section{padding-block:56px;border-top:1px solid var(--line)}
 
-        <div class="header-meta">
-          <img
-            src="assets/FotoPerfil.jpg"
-            alt="Roberto Torres"
-            class="profile-photo"
-          />
-          <div class="header-links">
-            <a href="cv/Roberto_Torres.pdf" target="_blank">Download CV</a>
-            <a
-              href="https://www.linkedin.com/in/roberto-torres-8b129132/"
-              target="_blank"
-              >LinkedIn</a
-            >
-            <a href="mailto:rob.torres1@outlook.com.com">Email</a>
+header.top{border-bottom:1px solid var(--line);background:var(--bg)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-weight:600;color:var(--ink);text-decoration:none}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+nav a:hover{color:var(--ink)}
+@media (max-width:640px){nav ul{display:none}}
+
+.hero{padding-block:56px 40px;display:grid;grid-template-columns:auto minmax(0,1fr);gap:32px;align-items:start}
+@media (max-width:640px){.hero{grid-template-columns:1fr;gap:20px}}
+.photo{width:148px;height:148px;border-radius:12px;overflow:hidden;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:var(--serif);font-size:2.4rem;font-weight:700;border:1px solid var(--line)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-text{display:flex;flex-direction:column;gap:14px;min-width:0}
+.hero h1{font-size:clamp(2.2rem,5vw,3rem);letter-spacing:-.01em}
+.role-line{font-size:1.15rem;font-weight:600;color:var(--accent)}
+.tagline{font-family:var(--serif);font-size:1.25rem;line-height:1.4}
+.lede{color:var(--muted);max-width:62ch}
+.facts{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.92rem;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:600}
+.ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+.btn{display:inline-block;padding:9px 16px;border-radius:8px;font-weight:600;font-size:.94rem;text-decoration:none;border:1px solid var(--line);color:var(--ink);background:var(--surface)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+
+.numbers{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-block:8px 48px}
+@media (max-width:760px){.numbers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.num{display:flex;flex-direction:column;gap:4px;min-width:0}
+.num strong{font-family:var(--serif);font-size:2rem;font-variant-numeric:tabular-nums;line-height:1.2}
+.num span{color:var(--muted);font-size:.9rem;line-height:1.4}
+
+.role{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px;padding-block:20px;border-bottom:1px solid var(--line)}
+.role:last-child{border-bottom:0}
+@media (max-width:700px){.role{grid-template-columns:1fr;gap:6px}}
+.when{font-size:.88rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.role-body{display:flex;flex-direction:column;gap:8px;min-width:0}
+.co{color:var(--muted);font-weight:500;font-family:var(--sans);font-size:.95rem}
+.role ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:5px}
+
+.projects{display:flex;flex-direction:column;gap:28px}
+.project{display:grid;grid-template-columns:170px minmax(0,1fr);gap:24px}
+@media (max-width:700px){.project{grid-template-columns:1fr;gap:6px}}
+.kind{font-size:.88rem;color:var(--muted)}
+.project-body{display:flex;flex-direction:column;gap:6px;min-width:0}
+.stack{font-size:.9rem;color:var(--muted)}
+.minor{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding-top:24px;border-top:1px dashed var(--line)}
+@media (max-width:700px){.minor{grid-template-columns:1fr}}
+
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+@media (max-width:860px){.skills{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.skills{grid-template-columns:1fr}}
+.skill{min-width:0}
+.skill h3{font-family:var(--sans);font-size:.98rem;font-weight:600;margin-bottom:6px}
+.skill p{color:var(--muted);font-size:.93rem}
+
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+@media (max-width:700px){.edu{grid-template-columns:1fr}}
+.edu ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.edu li{display:flex;flex-direction:column}
+.edu li span{color:var(--muted);font-size:.9rem}
+
+.contact{display:flex;flex-direction:column;gap:14px;max-width:640px}
+.mailbox{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.mailbox code{font-family:var(--sans);font-size:1.05rem;font-weight:600;user-select:all;word-break:break-all}
+.mailbox button{font:inherit;font-size:.85rem;font-weight:600;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+footer{padding-block:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">rtorres.tech</a>
+    <nav aria-label="Sections"><ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="photo"><img src="assets/FotoPerfil.jpg" alt="Roberto Torres" onerror="this.remove()">RT</div>
+    <div class="hero-text">
+      <h1>Roberto Torres</h1>
+      <div class="role-line">Data Architect · BI &amp; Analytics Leader</div>
+      <p class="tagline">I lead data teams and design the platforms they run on.</p>
+      <p class="lede">15+ years at IBM, Cargill, Pfizer and HP. Today I am lead architect on a Customer 360 / MDM migration from Oracle CDH to Google Cloud. Before that I ran a ~45-person software and BI organization at Cargill. Completing an MSc in Data Science &amp; AI at the University of Liverpool.</p>
+      <div class="facts">
+        <span>Based in <b>San José, Costa Rica</b></span>
+        <span>Open to relocation to <b>Western Europe</b></span>
+        <span><b>English C1</b> (IELTS 7.5) · <b>Spanish</b> native</span>
+      </div>
+      <div class="ctas">
+        <a class="btn primary" href="cv/Roberto_Torres.pdf">Download CV</a>
+        <a class="btn" href="https://www.linkedin.com/in/roberto-torres-8b129132/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap numbers">
+    <div class="num"><strong>130M+</strong><span>customer records in the Customer 360 platform I architect</span></div>
+    <div class="num"><strong>8 → 22</strong><span>direct reports grown at Cargill, with 0% attrition</span></div>
+    <div class="num"><strong>$3M</strong><span>in savings found with Power BI analyses</span></div>
+    <div class="num"><strong>7 h → 47 min</strong><span>ELT runtime after redesigning the reporting architecture</span></div>
+  </div>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <article class="role">
+        <div class="when">Mar 2026 – now</div>
+        <div class="role-body">
+          <h3>Data Architect <span class="co">· IBM</span></h3>
+          <ul>
+            <li>Lead architect for an Oracle CDH to GCP migration of a Customer 360 / MDM platform across 25 countries; lead a 5-person architecture sub-team.</li>
+            <li>Mapped end-to-end lineage of all 5 integration flows and found the root causes of ETL load failures.</li>
+            <li>Manage data masking and role-based access protecting personal data in Customer 360.</li>
+            <li>Use GenAI (Claude) with a 4-person team for CDH model analysis, source-to-target mapping, SQL and Airflow/dbt code, and documentation.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role">
+        <div class="when">Sep 2025 – Feb 2026</div>
+        <div class="role-body">
+          <h3>Independent Data &amp; AI Consultant <span class="co">· ThruIQ</span></h3>
+          <ul>
+            <li>Built end-to-end data platforms on Snowflake, dbt and AWS with a Medallion architecture and CI/CD on GitHub Actions.</li>
+            <li>Built predictive models with Snowflake ML and Python.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role">
+        <div class="when">Dec 2021 – Sep 2025</div>
+        <div class="role-body">
+          <h3>Senior Software &amp; BI Manager <span class="co">· Cargill</span></h3>
+          <ul>
+            <li>Led 22 direct reports and ~23 contractors across LATAM and North America; delivered 20+ solutions with 94% client satisfaction.</li>
+            <li>Hired 14 people and promoted 8, with 0% attrition over 3 years and a 96% engagement score.</li>
+            <li>Built a Power BI alert for time-entry gaps that prevented finance-close issues and recovered ~$60K a year in billable revenue.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role">
+        <div class="when">Feb 2020 – Dec 2021</div>
+        <div class="role-body">
+          <h3>Senior Lead, Data Analytics <span class="co">· Cargill</span></h3>
+          <ul>
+            <li>Cut release time from 16 hours to about 1 hour as part of the reporting redesign.</li>
+            <li>Replaced spreadsheet reporting with 45+ self-service Tableau dashboards.</li>
+            <li>Set governance, QA and modeling standards that cut monthly support tickets from 4+ to 1.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role">
+        <div class="when">Jul 2017 – Jan 2020</div>
+        <div class="role-body">
+          <h3>Data Analytics Specialist <span class="co">· Pfizer</span></h3>
+          <ul>
+            <li>Tech lead and product co-lead of governed data platforms for quality, audit and compliance, traceable to financial reporting.</li>
+            <li>Moved Excel processes into Oracle with Alteryx and SQL: loads went from 3 days to 10 minutes.</li>
+            <li>Spotfire dashboards that cut manual reporting effort by ~42%.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="role">
+        <div class="when">Jun 2010 – Jun 2017</div>
+        <div class="role-body">
+          <h3>BI Specialist, Account Delivery Lead, Technology Consultant <span class="co">· HP / DXC</span></h3>
+          <ul>
+            <li>Led 25 developers supporting 400+ applications for an oil &amp; gas client in Canada; SLA compliance went from 58% to 89% and client satisfaction from 74% to 91%.</li>
+            <li>Built an SAP solution that cut vendor receipt reconciliation from 3 days to 1 hour. It is still in use.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <div class="kind">Cargill · cost analytics</div>
+          <div class="project-body">
+            <h3>Savings in device usage and contractor billing</h3>
+            <p>Power BI analyses of warehouse device usage and contractor billing found $3M in savings, $1M of it from stopping over-reported contractor hours.</p>
+            <p class="stack">Power BI, SQL</p>
           </div>
+        </article>
+        <article class="project">
+          <div class="kind">HP · conservation</div>
+          <div class="project-body">
+            <h3>HP Earth Insights, with Conservation International</h3>
+            <p>Backend engineer in the 12-person team that built a big data system forecasting whether endangered species populations are rising or falling. <a href="https://www.computerworld.com/article/1626014/conservation-international.html" target="_blank" rel="noopener">Press coverage</a></p>
+          </div>
+        </article>
+        <div class="minor">
+          <article class="project-body">
+            <div class="kind">Personal project</div>
+            <h3>Measles Analytics</h3>
+            <p>WHO measles data loaded with AWS Lambda and S3 into Snowflake, modeled with dbt, with a Snowflake ML model for country-level outbreak predictions.</p>
+            <a href="https://github.com/Arghost/snowflake-dbt-measles-analytics" target="_blank" rel="noopener">Code on GitHub</a>
+          </article>
+          <article class="project-body">
+            <div class="kind">Personal project</div>
+            <h3>Urban Crime Analytics</h3>
+            <p>Chicago crime records loaded into Snowflake and modeled with dbt by crime type and police district, with Snowsight dashboards.</p>
+            <a href="https://github.com/Arghost/urban-crime-analytics" target="_blank" rel="noopener">Code on GitHub</a>
+          </article>
         </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <main>
-      <!-- About -->
-      <section class="section">
-        <div class="container">
-          <h2>About</h2>
-          <p>
-            I am a AI and data analytics leader with fifteen years of experience
-            in global markets, including pharmaceuticals and other regulated
-            industries. I connect business analytics, customer insights and
-            market data with strategy, portfolio management and performance
-            tracking. My work focuses on data architecture, governance and
-            executive dashboards that help leaders make better decisions with
-            confidence.
-          </p>
-        </div>
-      </section>
-
-      <!-- Experience snapshot -->
-      <section class="section section-alt">
-        <div class="container">
-          <h2>Experience snapshot</h2>
-          <div class="grid-3">
-            <div class="card">
-              <h3>ThruIQ</h3>
-              <p class="card-role">
-                Founder – Data and AI Consulting · 2025–Present
-              </p>
-              <p>
-                Experimental lab for analytics and AI, including a confidential
-                ecommerce solution that combines data engineering, AI agents and
-                RAG.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>Cargill</h3>
-              <p class="card-role">
-                Senior Software and BI Engineering Manager · 2021–2025
-              </p>
-              <p>
-                Led a team of engineers for Latin America and North America.
-                Delivered portfolio optimisation, dashboards and savings above
-                three million dollars.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>Cargill</h3>
-              <p class="card-role">Senior Lead – Data Analytics · 2020–2021</p>
-              <p>
-                Redesigned analytics architecture, reduced ETL and release time
-                and moved key reports from manual sheets to trusted Tableau
-                dashboards.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>Pfizer</h3>
-              <p class="card-role">Data Analytics Specialist · 2017–2020</p>
-              <p>
-                Led the global analytics for Audit and Compliance. Improved data
-                integrity for more than two hundred controls and reduced audit
-                prep time.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>DXC / Hewlett Packard</h3>
-              <p class="card-role">
-                Business Intelligence Specialist · 2015–2017
-              </p>
-              <p>
-                Built analytics and reporting solutions for a global client.
-                Lowered manual reporting effort and improved data quality and
-                KPI alignment.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>DXC / Hewlett Packard</h3>
-              <p class="card-role">Account Delivery Lead · 2012–2015</p>
-              <p>
-                Ran operations for more than four hundred applications. Improved
-                incident resolution time and service level performance for
-                senior stakeholders.
-              </p>
-            </div>
-          </div>
-
-          <div class="experience-actions">
-            <a
-              href="https://www.linkedin.com/in/roberto-torres-8b129132/"
-              target="_blank"
-              class="btn-more"
-            >
-              More on LinkedIn
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portfolio projects -->
-      <section class="section">
-        <div class="container">
-          <h2>Portfolio projects</h2>
-          <p class="section-intro">
-            Below are selected projects from my data analytics certification and
-            personal work. Each one includes a business question, an analytical
-            approach and clear impact.
-          </p>
-
-          <div class="grid-3">
-            <article class="card">
-              <h3>EasyVisa</h3>
-              <p class="card-tag">Classification · Predictive modeling</p>
-              <p>
-                Built a classification model to estimate the probability of visa
-                approval based on job, education and employer data. Focus on
-                model performance, fairness and misclassification costs.
-              </p>
-              <a href="projects/EasyVisa.html" target="_blank" class="card-link"
-                >View project</a
-              >
-            </article>
-
-            <article class="card">
-              <h3>FoodHub</h3>
-              <p class="card-tag">Customer behavior · Demand patterns</p>
-              <p>
-                Analyzed order data for an online food delivery platform to
-                understand demand peaks, customer segments and drivers of repeat
-                orders, supporting marketing and operational planning.
-              </p>
-              <a href="projects/FoodHub.html" target="_blank" class="card-link"
-                >View project</a
-              >
-            </article>
-
-            <article class="card">
-              <h3>INN Hotels</h3>
-              <p class="card-tag">Text analytics · Reviews</p>
-              <p>
-                Analyze and find which factors have a high influence on booking
-                cancellations using predictive models and help in formulating
-                profitable policies for cancellations and refunds.
-              </p>
-              <a
-                href="projects/INNHotels.html"
-                target="_blank"
-                class="card-link"
-                >View project</a
-              >
-            </article>
-
-            <article class="card">
-              <h3>ReCell</h3>
-              <p class="card-tag">Risk analytics</p>
-              <p>
-                Linear regression model to predict the price of a used
-                phone/tablet and identify factors that significantly influence
-                it.
-              </p>
-              <a href="projects/ReCell.html" target="_blank" class="card-link"
-                >View project</a
-              >
-            </article>
-
-            <article class="card">
-              <h3>Stock prices</h3>
-              <p class="card-tag">Unsupervised learning</p>
-              <p>
-                Use unsupervised learning to find possible stock groupings and
-                recommend investments for an investing firm.
-              </p>
-              <a
-                href="projects/TradeAndAhead.html"
-                target="_blank"
-                class="card-link"
-                >View project</a
-              >
-            </article>
-
-            <article class="card">
-              <h3>ReneWind</h3>
-              <p class="card-tag">Classification models</p>
-              <p>
-                Build various classification models, tune them, and find the
-                best one that will help identify failures so that the generators
-                could be repaired before failing/breaking to reduce the overall
-                maintenance cost.
-              </p>
-              <a href="projects/ReneWind.html" target="_blank" class="card-link"
-                >View project</a
-              >
-            </article>
-
-            <article class="card">
-              <h3>Measles Analytics</h3>
-              <p class="card-tag">Data Engineering + ML</p>
-              <p>
-                Designed modern data stack (AWS Lambda, S3, Snowflake, dbt,
-                Snowflake ML, Tableau) to ingest real WHO data, model measles
-                risk and deliver country-level outbreak predictions
-              </p>
-              <a
-                href="https://github.com/Arghost/snowflake-dbt-measles-analytics"
-                target="_blank"
-                class="card-link"
-                >View project</a
-              >
-            </article>
-            <article class="card">
-              <h3>Crime Analytis</h3>
-              <p class="card-tag">Data Engineering</p>
-              <p>
-                Designed modern data stack (AWS Lambda, S3, Snowflake, dbt,
-                Snowflake, Snowsight) to ingest real Chicago crime data, model
-                tendencies and group them by crime type, police district and
-                more
-              </p>
-              <a
-                href="https://github.com/Arghost/urban-crime-analytics"
-                target="_blank"
-                class="card-link"
-                >View project</a
-              >
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section class="section section-alt">
-        <div class="container">
-          <h2>Contact</h2>
-          <p>
-            If you would like to discuss roles in Leadership, AI, Business
-            Analytics or Data Enginerring, feel free to reach out.
-          </p>
-          <p>
-            <a href="mailto:rob.torres1@outlook.com">rob.torres1@outlook.com</a>
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>© <span id="year"></span> Roberto Torres. All rights reserved.</p>
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill"><h3>Data engineering</h3><p>Legacy-to-cloud migration, ETL/ELT, CDC, source-to-target mapping, lineage, SQL, Python, dbt, Airflow, Informatica, Pub/Sub, CI/CD</p></div>
+        <div class="skill"><h3>Modeling and architecture</h3><p>Kimball dimensional models, Medallion architecture, data products, MDM (match &amp; merge, deduplication), BigQuery, Snowflake</p></div>
+        <div class="skill"><h3>Leadership</h3><p>Hiring and promotions, teams up to 22 direct reports plus contractors, stakeholder and vendor management, Agile/Scrum</p></div>
+        <div class="skill"><h3>Governance and quality</h3><p>Data quality, Collibra, data masking, role-based access, governance standards</p></div>
+        <div class="skill"><h3>BI and analytics</h3><p>Power BI, Tableau, Spotfire, self-service analytics, Snowflake ML and Python predictive models</p></div>
+        <div class="skill"><h3>Cloud and tooling</h3><p>GCP, Snowflake, AWS, Azure storage, Git, Docker, Terraform (hands-on lab), GenAI assistants for mapping, code and documentation</p></div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </body>
+  <section id="education">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="edu">
+        <ul>
+          <li><strong>MSc Data Science &amp; Artificial Intelligence</strong><span>University of Liverpool · expected Aug 2027</span></li>
+          <li><strong>MBA, Finance</strong><span>Instituto Tecnológico de Costa Rica · 2012</span></li>
+          <li><strong>BSc Computer Engineering</strong><span>Instituto Tecnológico de Costa Rica · 2007</span></li>
+        </ul>
+        <ul>
+          <li><strong>SnowPro Core Certification</strong><span>Snowflake · 2026</span></li>
+          <li><strong>Postgraduate Program in Data Science &amp; Business Analytics</strong><span>University of Texas at Austin · 2025</span></li>
+          <li><strong>Organizational Leadership</strong><span>Harvard Business School Online · 2023</span></li>
+          <li><strong>Certified Scrum Master and Product Owner</strong><span>Scrum Inc. · 2023</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <h2 style="margin:0">Contact</h2>
+      <div class="mailbox"><code id="mail">rob.torres1@outlook.com</code><button type="button" id="copy">Copy</button></div>
+      <div class="ctas">
+        <a class="btn" href="https://www.linkedin.com/in/roberto-torres-8b129132/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="cv/Roberto_Torres.pdf">CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Roberto Torres · updated November 2026</div></footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this, el=document.getElementById('mail'), t=el.textContent;
+  function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected';}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)},sel);}else{sel();}
+});
+</script>
+
+</body>
 </html>
